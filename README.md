@@ -3,40 +3,6 @@
 GattLib is a library used to access Generic Attribute Profile (GATT) protocol of BLE (Bluetooth Low Energy) devices.
 It has been introduced to allow to build applications that could easily communicate with BLE devices.
 
-It supports Bluez v4 and v5. On Bluez versions prior to v5.42, gattlib used Bluez source code while it uses D-Bus API 
-from v5.42. D-Bus API can be used on version prior to Bluez v5.42 by using the CMake flag `-DGATTLIB_FORCE_DBUS=TRUE`:
-
-```
-mkdir build && cd build
-cmake -DGATTLIB_FORCE_DBUS=TRUE ..
-make
-```
-
-Latest GattLib Release packages
-===============================
-
-* For x86_64, with Bluez DBUS Support (Recommended):
-
-    - ZIP: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dbus_dev_x86_64.zip>
-    - DEB: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dbus_dev_x86_64.deb>
-    - RPM: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dbus_dev_x86_64.rpm>
-
-* For x86_64, with Bluez Legacy Support:
-
-    - ZIP: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dev_x86_64.zip>
-    - DEB: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dev_x86_64.deb>
-    - RPM: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dev_x86_64.rpm>
-
-* For ARM 32-bit (for Bluez v5.40+ with DBus support):
-
-    - ZIP: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dev_armhf.zip>
-    - DEB: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dev_armhf.deb>
-
-* For ARM 64-bit (for Bluez v5.40+ with DBus support):
-
-    - ZIP: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dev_arm64.zip>
-    - DEB: <https://github.com/labapart/gattlib/releases/download/dev/gattlib_dev_arm64.deb>
-
 Build GattLib
 =============
 
@@ -47,24 +13,6 @@ following command: `sudo apt-install libbluetooth-dev libreadline-dev`
 ```
 cd <gattlib-src-root>
 mkdir build && cd build
-cmake ..
-make
-```
-
-### Cross-Compilation
-
-To cross-compile GattLib, you must provide the following environment variables:
-
-- `CROSS_COMPILE`: prefix of your cross-compile toolchain
-- `SYSROOT`: an existing system root that contains the libraries and include files required by your application
-
-Example:
-
-```
-cd <gattlib-src-root>
-mkdir build && cd build
-export CROSS_COMPILE=~/Toolchains/gcc-linaro-4.9-2015.05-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
-export SYSROOT=~/Distributions/debian-wheezy
 cmake ..
 make
 ```
