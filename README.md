@@ -22,12 +22,12 @@ Examples
 
 * [Demonstrate discovering of primary services and characteristics](/examples/discover/discover.c):
 
-        ./examples/discover/discover 78:A5:04:22:45:4F
+        ./examples/discover/discover B0:B4:48:BA:3C:02
 
 * [Demonstrate characteristic read/write](/examples/read_write/read_write.c):
 
-        ./examples/read_write/read_write 78:A5:04:22:45:4F read 00002a29-0000-1000-8000-00805f9b34fb
-        ./examples/read_write/read_write 78:A5:04:22:45:4F write 00002a6b-0000-1000-8000-00805f9b34fb 0x1234
+        ./examples/read_write/read_write B0:B4:48:BA:3C:02 read  f000aa01-0451-4000-b000-000000000000
+        ./examples/read_write/read_write B0:B4:48:BA:3C:02 write f000aa02-0451-4000-b000-000000000000 0x0001
 
 * [Demonstrate BLE scanning and connection](/examples/ble_scan/ble_scan.c):
 
