@@ -17,18 +17,6 @@ cmake ..
 make
 ```
 
-Package GattLib
-===============
-
-From the build directory: `cpack ..`
-
-**Note:** It generates DEB, RPM and ZIP packages. Ensure you have the expected dependencies
- installed on your system (eg: to generate RPM package on Debian-based Linux distribution
-  you must have `rpm` package installed).
-
-Default install directory is defined as /usr by CPack variable `CPACK_PACKAGE_INSTALL_DIRECTORY`.  
-To change the install directory to `/usr/local` run: `cpack -DCPACK_PACKAGE_INSTALL_DIRECTORY=/usr/local ..`
-
 Examples
 ========
 
